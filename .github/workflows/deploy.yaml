@@ -1,9 +1,7 @@
 name: Deploy Pulumi Project
 
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch:
 
 jobs:
   deploy:
