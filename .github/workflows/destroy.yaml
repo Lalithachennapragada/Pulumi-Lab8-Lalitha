@@ -1,0 +1,23 @@
+name: Destroy Pulumi Resources
+
+on:
+  workflow_dispatch:
+
+jobs:
+  destroy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Install Pulumi
+        run: curl -fsSL https://get.pulumi.com | sh
+
+      - name: Set Up AWS Credentials
+        run: echo "PULUMI_ACCESS_TOKEN=${{ secrets.PULUMI_ACCESS_TOKEN }}" >> $GITHUB_ENV
+
+      - name: Select Pulumi Stack
+        run: pulumi stack select dev  # Replace <your-stack-name> with your actual stack name
+
+      - name: Destroy Resources
+        run: pulumi destroy --yes
