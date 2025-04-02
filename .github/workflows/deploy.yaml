@@ -25,7 +25,7 @@ jobs:
         run: npm install
 
       - name: Select Pulumi Stack
-        run: pulumi stack select lab8
+        run: pulumi stack select billy
         
       - name: Configure AWS Region
         run: pulumi config set aws:region us-east-1 --stack billy
