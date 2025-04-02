@@ -25,7 +25,7 @@ jobs:
         run: npm install
 
       - name: Select Pulumi Stack
-        run: pulumi stack select billy  # Replace "dev" with your actual stack name
+        run: pulumi stack select lalitha  # Replace "dev" with your actual stack name
 
       - name: Deploy with Pulumi
         run: pulumi up --yes
