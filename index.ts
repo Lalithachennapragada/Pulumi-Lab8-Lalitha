@@ -1,5 +1,6 @@
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
+// Testing OIDC authentication via GitHub Web UI
 
 // -------------------- S3 Static Website Setup --------------------
 
